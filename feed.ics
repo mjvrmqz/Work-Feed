@@ -2,10 +2,10 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Plan a self-care session by researching stretching routines and creating card questions from *Drive* to serve as a personal compass for motivation and reflection. #ActionableSteps #NotionCalendar #macOS
-DTEND:20260510T141000Z
-DTSTART:20260510T134000Z
-SUMMARY:Group 1
-UID:8ba192ac-3dce-4526-b257-30cf025c9edf@8ba1.org
+DESCRIPTION:Research and gather at least 10 YouTube channels for outreach before starting the video editing screening process. Estimated time to complete is 1 hour. #ActionableSteps #NotionCalendar #EndOfDay #macOS
+DTEND:20260510T170000Z
+DTSTART:20260510T160000Z
+SUMMARY:Group 2
+UID:acb348cf-0695-46e1-95d1-faca13e62f11@acb3.org
 END:VEVENT
 END:VCALENDAR
