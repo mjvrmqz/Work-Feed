@@ -10,9 +10,12 @@ fi
 
 python3 work_feed_to_ics.py
 
+git remote set-url origin https://github.com/mjvrmqz/Work-Feed.git
+git stash
 git fetch origin
 git rebase origin/main
-git add feed.ics
+git stash pop
+git add "Work Feed.ics"
 git diff --cached --quiet && echo "No changes to ICS, skipping commit." && exit 0
 git commit -m "Update ICS feed $(date -u +"%Y%m%dT%H%M%SZ")"
 git push origin main

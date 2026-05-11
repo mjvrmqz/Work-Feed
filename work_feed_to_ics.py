@@ -6,10 +6,10 @@ from ics import Calendar, Event
 
 # === CONFIG ===
 NOTION_TOKEN = os.environ.get("NOTION_TOKEN", "")
-DATABASE_ID  = "29520c51aebe80798d10db123c986db0"
+DATABASE_ID  = os.environ.get("NOTION_DB_ID", "29520c51aebe80798d10db123c986db0")
 
 if not NOTION_TOKEN:
-    raise RuntimeError("NOTION_TOKEN environment variable not set. Copy .env.example to .env and fill it in.")
+    raise RuntimeError("NOTION_TOKEN environment variable not set. Check your .env file.")
 
 HEADERS = {
     "Authorization": f"Bearer {NOTION_TOKEN}",
@@ -51,9 +51,9 @@ def create_ics(events):
         e.end = end
         e.description = description
         cal.events.add(e)
-    with open("feed.ics", "w") as f:
+    with open("Work Feed.ics", "w") as f:
         f.writelines(cal)
-    print(f"  Wrote feed.ics ({len(cal.events)} events)")
+    print(f"  Wrote Work Feed.ics ({len(cal.events)} events)")
 
 def main():
     print("Querying Work database...")
