@@ -11,7 +11,7 @@ fi
 python3 work_feed_to_ics.py
 
 git remote set-url origin https://github.com/mjvrmqz/Work-Feed.git
-git stash
+git stash --include-untracked
 git fetch origin
 git rebase origin/main
 git stash pop
